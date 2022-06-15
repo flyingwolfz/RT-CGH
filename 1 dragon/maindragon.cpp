@@ -26,11 +26,7 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-//-----------------------------------------------------------------------------
-//
-// optixMeshViewer: simple interactive mesh viewer 
-//
-//-----------------------------------------------------------------------------
+
 
 #ifdef __APPLE__
 #  include <GLUT/glut.h>
@@ -305,7 +301,7 @@ void setupCamera()
 
 void setupLights()
 {
-     float max_d = fmaxf(aabb.extent(0), aabb.extent(1)); // max of x, y£¨z components
+     float max_d = fmaxf(aabb.extent(0), aabb.extent(1)); // max of x, y¬£¬¨z components
 
 	/*
     BasicLight lights[] = {
@@ -667,7 +663,7 @@ void calculateCameraVariables(float3 eye, float3 lookat, float3 up,
 }
 
 
-//ÃÌº”–˝◊™
+//√å√≠¬º√ì√ê√Ω√ó¬™
 class Quaternion
 {
 public:
