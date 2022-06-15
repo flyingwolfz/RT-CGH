@@ -2,7 +2,7 @@
 under updating
 
 
-change like this if ptx file is used
+change it this way, if ptx file is used
 
 ```
 const std::string &ptx = "pinhole_camera.cu.ptx";
