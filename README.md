@@ -2,10 +2,10 @@
 
 under updating
 
-CGH using Optix 6.5 ray tracing engine for three visualizations. 
 
-Additional Optix 7.4 code for dragon visualization.
+Current contents:  dragon visualization, mirror visualization based on Optix 6.5 and ptx file.
 
+Next update: refraction visualization based on Optix 6.5, dragon visualization based on Optix 7.4, cuda files for ray tracing kernels.
 
 change it this way, if ptx file is used
 
