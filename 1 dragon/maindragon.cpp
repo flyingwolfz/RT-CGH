@@ -205,9 +205,6 @@ void createContext()
 
     context["output_buffer"]->set(outbuffer.complex);
 
-	// change like this if ptx file is used
-	//const std::string &ptx = "pinhole_camera.cu.ptx";
-	//Program ray_gen_program = context->createProgramFromPTXFile(ptx, "pinhole_camera");
 
     // Ray generation program
     const char *ptx = sutil::getPtxString( SAMPLE_NAME, "pinhole_camera.cu" );
