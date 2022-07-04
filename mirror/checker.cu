@@ -83,14 +83,14 @@ RT_PROGRAM void closest_hit_radiance()
 
   float3 color = Ka * ambient_light_color;
   float3 hit_point = ray.origin + t_hit * ray.direction;
-  //Ã¿ÓĞÒ»¸ö¹âÔ´¾ÍÑ­»·Ò»´Î£¬¼ÆËã¶ÔÓ¦µÄÉ¢Éä¹â
+  //æ¯æœ‰ä¸€ä¸ªå…‰æºå°±å¾ªç¯ä¸€æ¬¡ï¼Œè®¡ç®—å¯¹åº”çš„æ•£å°„å…‰
   for (int i = 0; i < lights.size(); ++i) {
 	  BasicLight light = lights[i];
 	  float3 L = normalize(light.pos - hit_point);
 	  float nDl = dot(ffnormal, L);
 	  if (nDl > 0)
-		  //Èç¹ûcos´óÓÚ0£¬É¢Éä¹âÓÉ°ëÀ¼²®ÌØ¶¨ÂÉ¼ÆËã
-		  //»·¾³¹â+É¢ÉäÏµÊı*É¢Éä¹â
+		  //å¦‚æœcoså¤§äº0ï¼Œæ•£å°„å…‰ç”±åŠå…°ä¼¯ç‰¹å®šå¾‹è®¡ç®—
+		  //ç¯å¢ƒå…‰+æ•£å°„ç³»æ•°*æ•£å°„å…‰
 		  color += Kd * nDl * light.color;
   }
   prd_radiance.result = color;
