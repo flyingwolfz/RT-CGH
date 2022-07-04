@@ -36,4 +36,4 @@ Download Opencv 3.4.7 (only used to save CGH to png, not essentional for real-ti
 
 Install. Build OptiX 6.5 samples following official guide entitle "INSTALL-WIN.txt" , it can be found where you install OptiX 6.5
 
-Then there are two ways to run our code:(1) replaced the samples project (2) build your own project. Details will be added in the next update.
+Then there are two ways to run our code. Details will be added in the next update.
