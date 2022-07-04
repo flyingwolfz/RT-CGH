@@ -69,7 +69,7 @@ const char* const SAMPLE_NAME = "dragon";
 //------------------------------------------------------------------------------
 int debugmode =0;  
 
-float fencengshu =50.0f;
+float fencengshu =1.0f;
 float3 l1;
 float dep1;
 float z = 300.0f;
