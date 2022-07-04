@@ -68,7 +68,7 @@ const char* const SAMPLE_NAME = "mirror";
 //---------------
 int debugmode=0;  
 
-float fencengshu =3.0f;
+float fencengshu =1.0f;
 float3 l1;
 float dep1;
 float z = 300.0f;
@@ -407,7 +407,7 @@ void setupCamera()
 
 void setupLights()
 {
-     float max_d = fmaxf(aabb.extent(0), aabb.extent(1)); // max of x, y£¬z components
+     float max_d = fmaxf(aabb.extent(0), aabb.extent(1)); // max of x, yÂ£Â¬z components
 
 	/*
     BasicLight lights[] = {
@@ -474,7 +474,7 @@ void updateCamera()
     context["W"  ]->setFloat( camera_w );
 
 	 l1 = camera_lookat - camera_eye;
-	//std::cout << "l1£º" << l1.x << "," << l1.y << "," <<l1.z << std::endl;
+	//std::cout << "l1Â£Âº" << l1.x << "," << l1.y << "," <<l1.z << std::endl;
 	 dep1 = length(l1);
 	//std::cout << dep1 << std::endl;
 	l1 = normalize(l1);
@@ -768,7 +768,7 @@ void calculateCameraVariables(float3 eye, float3 lookat, float3 up,
 }
 
 
-//Ìí¼ÓÐý×ª
+//ÃŒÃ­Â¼Ã“ÃÃ½Ã—Âª
 class Quaternion
 {
 public:
