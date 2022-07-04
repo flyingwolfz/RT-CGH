@@ -67,7 +67,7 @@ const char* const SAMPLE_NAME = "dragon";
 // Globals
 //
 //------------------------------------------------------------------------------
-int debugmode =0;  
+int debugmode =1;  
 
 float fencengshu =1.0f;
 float3 l1;
@@ -437,16 +437,27 @@ int rank = 2;
 
 void glutDisplay()
 {
-	if (run == 1) {
+       if (run == 1) {
 	
-	updateCamera();
-
-		context->launch(0, width, height);
-
-		cufftExecC2C(forward_plan, complex_prt, complex_prt, CUFFT_FORWARD);
-
-
-		context->launch(1, width, height);
+       updateCamera();
+       float time_GPU;
+       cudaEvent_t start_GPU, stop_GPU; 
+       cudaEventCreate(&start_GPU);
+       cudaEventCreate(&stop_GPU);
+       cudaEventRecord(start_GPU, 0);
+       for (int i = 0; i < 20; i++)
+       {
+          context->launch(0, width, height);
+          cufftExecC2C(forward_plan, complex_prt, complex_prt, CUFFT_FORWARD);
+          context->launch(1, width, height);
+       }
+      cudaEventRecord(stop_GPU, 0);
+      cudaEventSynchronize(start_GPU);    
+      cudaEventSynchronize(stop_GPU);    
+      cudaEventElapsedTime(&time_GPU, start_GPU, stop_GPU);    
+      printf("\nThe time for GPU:\t%f(ms)\n", time_GPU / 20.0);
+      cudaEventDestroy(start_GPU);    
+      cudaEventDestroy(stop_GPU);
 	
 
 
