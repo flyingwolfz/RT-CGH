@@ -700,15 +700,7 @@ namespace osc {
 
       launchParamsBuffer.upload(&launchParams, 1);
 
-      float time_GPU;
-      cudaEvent_t start_GPU, stop_GPU;
-      //创建Event
-      cudaEventCreate(&start_GPU);
-      cudaEventCreate(&stop_GPU);
-      //记录当前时间
-      cudaEventRecord(start_GPU, 0);
-      for (int i = 0; i < 20; i++)
-      {
+     
           OPTIX_CHECK(optixLaunch(/*! pipeline we're launching launch: */
               pipeline, stream,
               /*! parameters and SBT */
@@ -737,14 +729,7 @@ namespace osc {
               1
           ));
           launchParams.frame_index++;
-      }
-      cudaEventRecord(stop_GPU, 0);
-      cudaEventSynchronize(start_GPU);    //等待事件完成。
-      cudaEventSynchronize(stop_GPU);    //等待事件完成。记录之前的任务
-      cudaEventElapsedTime(&time_GPU, start_GPU, stop_GPU);    //计算时间差
-      printf("\nThe time for GPU:\t%f(ms)\n", time_GPU / 20.0);
-      cudaEventDestroy(start_GPU);    //消除Event
-      cudaEventDestroy(stop_GPU);
+     
     
       // sync - make sure the frame is rendered before we download and
       // display (obviously, for a high-performance application you
