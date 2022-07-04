@@ -2,17 +2,29 @@
 
 ![捕获4](https://user-images.githubusercontent.com/57349703/175239422-729880a5-2592-4437-8f24-c06616675299.PNG)
 
-Code for real-time interactive CGH: dragon, mirror, refraction.
+Code for real-time interactive CGH using ray tracing: dragon, mirror, refraction.
 
 This is under updating.
 
-Current contents:  dragon visualization, mirror visualization based on Optix 6.5 and ptx file.
+## 0.Contents
 
-Next update: cuda files for ray tracing kernels. Generation speed. refraction visualization based on Optix 6.5, additional dragon visualization based on Optix 7.4.
+OptiX 6.5 code for dragon(single mesh), mirror and refraction. Additional OptiX 7.4 code for dragon. THe OptiX 6.5 codes are based on NVIDIA OptiX 6.5 samples. THe Optix 7.4 codes are based on Siggraph  OptiX 7 Course Tutorial Code (https://github.com/ingowald/optix7course).
 
-Cuda files or ptx files are required. Change it this way, if ptx file is used.
+Ptx file is used currently for as a transition before CUDA file is released. CUDA files with GPU code will be released in the next update.
+
+Change it this way, if ptx file is used.
 
 ```
 const std::string &ptx = "pinhole_camera.cu.ptx";
 Program ray_gen_program = context->createProgramFromPTXFile(ptx, "pinhole_camera");
 ```
+
+## 1. environment setup
+
+Download CUDA 11.4 from https://developer.nvidia.com/cuda-toolkit
+
+Download Optix 6.5 (NVIDIA developer account required) from https://developer.nvidia.com/rtx/ray-tracing/optix
+
+Build OptiX 6.5 samples following official guide entitle "INSTALL-WIN.txt" , it can be found where you install OptiX 6.5
+
+Then there are two ways to run our code:(1) replaced the samples project (2) build your own project. Details will be added in the next update.
