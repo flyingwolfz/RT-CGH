@@ -27,7 +27,7 @@ Program ray_gen_program = context->createProgramFromPTXFile(ptx, "pinhole_camera
 ## 1. environment setup
 
 
-Download CUDA  from https://developer.nvidia.com/cuda-toolkit
+Download CUDA (10 for OptiX6, 11 for OptiX7) from https://developer.nvidia.com/cuda-toolkit
 
 Download Optix 6.5 (NVIDIA developer account required) from https://developer.nvidia.com/rtx/ray-tracing/optix
 
