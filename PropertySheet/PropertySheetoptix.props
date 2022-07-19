@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <IncludePath>C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\SDK\cuda;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\SDK\sutil;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\SDK\support\freeglut\include\GL;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\SDK\support\freeglut\include;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include\optixu;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\lib64;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\SDK\cuda;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\SDK\sutil;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\SDK\support\freeglut\win64\Release;D:\zcl\vs\OptiX Samples\lib\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>optix.6.5.0.lib;optix_prime.6.5.0.lib;optixu.6.5.0.lib;freeglut.lib;nvrtc.lib;sutil_sdk.lib;curand.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CudaCompile>
+      <CompileOut>$(IntDir)%(Filename)%(Extension).ptx</CompileOut>
+    </CudaCompile>
+    <CudaCompile>
+      <NvccCompilation>ptx</NvccCompilation>
+    </CudaCompile>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <HostDebugInfo>false</HostDebugInfo>
+      <AdditionalOptions>--keep %(AdditionalOptions)</AdditionalOptions>
+      <CodeGeneration>compute_86,sm_86</CodeGeneration>
+    </CudaCompile>
+    <ClCompile>
+      <PreprocessorDefinitions>NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>
