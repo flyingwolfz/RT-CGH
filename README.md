@@ -40,12 +40,12 @@ For OptiX 7 version, refer to Siggraph  OptiX 7 Course Tutorial Code.
 
 There are two ways to run our code: 
 
-- 1. Replace the OptiX sample project by our code. Then configure the properties of CUDA and opencv refer to the provided PropertySheet.
+- 1, Replace the OptiX sample project by our code. Then configure the properties of CUDA and opencv refer to the provided PropertySheet.
 
-- 2. Build your own cuda project. Refer to the provided PropertySheet for OptiX, CUDA ,opencv.
+- 2, Build your own cuda project. Refer to the provided PropertySheet for OptiX, CUDA ,opencv.
 
 For both methods, **remember set the correct SAMPLE_NAME** (your project name or sample project name), and change the model file path.
 
 ## 3.Tips
 
-- 1. under updating
+- 1, under updating
