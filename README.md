@@ -15,7 +15,7 @@ Additional OptiX 7.4 code for dragon.
 The OptiX 6.5 codes are based on NVIDIA OptiX 6.5 samples. The Optix 7.4 codes are based on Siggraph  OptiX 7 Course Tutorial Code 
 (https://github.com/ingowald/optix7course).
 
-Ptx file is used currently for as a transition before CUDA file is released. CUDA files with GPU code will be released in the next update.
+**Ptx file is used currently for as a transition before CUDA file is released. CUDA files with GPU code will be released in the next update.**
 
 Change it this way, if ptx file is used.
 
