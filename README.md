@@ -41,6 +41,8 @@ Install. Build OptiX 6.5 samples following official guide entitle "INSTALL-WIN.t
 
 For OptiX 7 version, refer to Siggraph  OptiX 7 Course Tutorial Code.
 
+Here are recommended tutorials：https://www.cnblogs.com/chen9510/p/11737941.html  https://blog.csdn.net/novanova2009/article/details/88917889
+
 ## 2. Run the code
 
 There are two ways to run our code: 
@@ -53,4 +55,23 @@ For both methods, **remember set the correct SAMPLE_NAME** (your project name or
 
 ## 3.Tips
 
-- 1, under updating
+- 1, Speed tests run with the dragon program. Comment out these lines of code
+
+```
+        float time_GPU;  //from this
+	cudaEvent_t start_GPU, stop_GPU;
+	cudaEventRecord(start_GPU, 0);
+	.............
+	for (int i = 0; i < 20; i++)
+	{	
+       //keep the CGH pipeline
+	}
+         ...............
+	printf("\nThe time for GPU:\t%f(ms)\n", time_GPU/20.0);
+	cudaEventDestroy(start_GPU);   
+	cudaEventDestroy(stop_GPU);// to the end
+```
+
+- 2, In some situations, debug mode is much slower, swith to release mode in IDE if it happens.
+
+- 3, under updating
