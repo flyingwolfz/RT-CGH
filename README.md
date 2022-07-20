@@ -2,7 +2,12 @@
 
 ![捕获4](https://user-images.githubusercontent.com/57349703/175239422-729880a5-2592-4437-8f24-c06616675299.PNG)
 
-**Real-time interactive CGH using ray tracing**
+
+**<p align="center">
+Real-time interactive CGH using ray tracing**
+</p>
+
+We firstly achieve real-time CGH with accurate depth precision and large depth range at the same time. (proposed in 2021, finished in 2021.10, repository created in 2022.6, latest update in 2022.7). Refer to our paper for detailed introduction.
 
 **Paper: now under review in Optics Express. (If it's useful, consider cite our paper!)**
 
