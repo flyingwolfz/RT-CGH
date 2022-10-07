@@ -7,7 +7,7 @@
 Real-time interactive CGH using ray tracing**
 </p>
 
- Proposed in 2021, finished in 2021.10, repository created in 2022.6, latest update in 2022.10. Refer to our paper for detailed introduction.
+Refer to our paper for detailed introduction.
 
 **Paper: to be published in optics express. (https://doi.org/10.1364/OE.474644) (If it's useful, consider cite our paper!)**
 
