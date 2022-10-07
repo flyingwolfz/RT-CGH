@@ -7,7 +7,7 @@
 Real-time interactive CGH using ray tracing**
 </p>
 
-Refer to our paper for detailed introduction.
+These codes should provide all experiment results in our paper. Refer to our paper for detailed introduction.
 
 **Paper: to be published in optics express. (https://doi.org/10.1364/OE.474644) (If it's useful, consider cite our paper!)**
 
