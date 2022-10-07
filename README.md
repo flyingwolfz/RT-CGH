@@ -74,4 +74,4 @@ For both methods, **remember set the correct SAMPLE_NAME** (your project name or
 
 - 2, In some situations when using OptiX 7, debug mode is much slower, swith to release mode in IDE if it happens. 
 
-- 3, These codes are not well organized, maybe I will organize them later, and provide more updates.
+- 3, Parts of our codes are not well organized. Maybe I will organize them later and provide more updates.
