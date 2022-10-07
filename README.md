@@ -29,7 +29,7 @@ Program ray_gen_program = context->createProgramFromPTXFile(ptx, "pinhole_camera
 
 ## 1. Environment setup
 
-We run our code in Windows 10.
+We run our code in Windows 10, VS2019/2017.
 
 Download CUDA (10 for OptiX 6, 11 for OptiX 7) from https://developer.nvidia.com/cuda-toolkit
 
