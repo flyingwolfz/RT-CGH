@@ -13,14 +13,12 @@ Refer to our paper for detailed introduction.
 
 ## 0.Contents
 
-OptiX 6.5 code for dragon(single mesh), mirror and refraction. 
+OptiX 6.5 code for dragon (single mesh), mirror and refraction. 
 
-Additional OptiX 7.4 code for dragon. 
+Additional OptiX 7.4 code for dragon (single mesh). 
 
 The OptiX 6.5 codes are based on NVIDIA OptiX 6.5 samples. The Optix 7.4 codes are based on Siggraph  OptiX 7 Course Tutorial Code 
 (https://github.com/ingowald/optix7course).
-
-**Ptx file is used currently for as a transition before CUDA file is released. CUDA files with GPU code will be released in the next update.**
 
 Change it this way, if ptx file is used.
 
@@ -47,7 +45,7 @@ Here are recommended tutorials：https://www.cnblogs.com/chen9510/p/11737941.htm
 
 There are two ways to run our code: 
 
-- 1, Replace the OptiX sample project by our code. Then configure the properties of CUDA and opencv refer to the provided PropertySheet.
+- 1, Replace the OptiX sample project by our code. Then configure the properties of CUDA and opencv referring to the provided PropertySheet.
 
 - 2, Build your own cuda project. Refer to the provided PropertySheet for OptiX, CUDA ,opencv.
 
@@ -55,7 +53,7 @@ For both methods, **remember set the correct SAMPLE_NAME** (your project name or
 
 ## 3.Tips
 
-- 1, Speed tests run with the dragon program. Comment out these lines of code
+- 1, Speed tests run using the dragon program. Comment out these lines of code for real-time display
 
 ```
         float time_GPU;  //from this
@@ -72,6 +70,6 @@ For both methods, **remember set the correct SAMPLE_NAME** (your project name or
 	cudaEventDestroy(stop_GPU);// to the end
 ```
 
-- 2, In some situations, debug mode is much slower, swith to release mode in IDE if it happens.
+- 2, In some situations when using OptiX 7, debug mode is much slower, swith to release mode in IDE if it happens. 
 
-- 3, under updating
+- 3, These codes are not well organized, maybe I will organize them later, and provide more updates.
