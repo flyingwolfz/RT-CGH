@@ -4,7 +4,7 @@
 
 
 **<p align="center">
-Real-time interactive CGH using ray tracing**
+Real-time interactive CGH with ray tracing**
 </p>
 
 This repository reproduces the above three experiments. Refer to our paper for detailed introduction.
