@@ -7,9 +7,9 @@
 Real-time interactive CGH using ray tracing**
 </p>
 
-These codes should provide all experiment results in our paper, few codes for refraction(in another computer) will be uploaded ASAP. Refer to our paper for detailed introduction.
+This repository reproduces the above three experiments. Refer to our paper for detailed introduction.
 
-**Paper: to be published in optics express. (https://doi.org/10.1364/OE.474644) (If it's useful, consider cite our paper!)**
+**Paper: https://doi.org/10.1364/OE.474644   (If it's useful, consider cite our paper!)**
 
 ## 0.Contents
 
@@ -19,13 +19,6 @@ Additional OptiX 7.4 code for dragon (single mesh).
 
 The OptiX 6.5 codes are based on NVIDIA OptiX 6.5 samples. The Optix 7.4 codes are based on Siggraph  OptiX 7 Course Tutorial Code 
 (https://github.com/ingowald/optix7course).
-
-Change it this way, if ptx file is used.
-
-```
-const std::string &ptx = "pinhole_camera.cu.ptx";
-Program ray_gen_program = context->createProgramFromPTXFile(ptx, "pinhole_camera");
-```
 
 ## 1. Environment setup
 
@@ -55,7 +48,7 @@ For both methods, **remember set the correct SAMPLE_NAME** (your project name or
 
 ## 3.Tips
 
-- 1, Speed tests run using the dragon program. Comment out these lines of code for real-time display
+- 1, Speed tests run using the dragon program. Comment out these lines of code:
 
 ```
         float time_GPU;  //from this
@@ -74,4 +67,4 @@ For both methods, **remember set the correct SAMPLE_NAME** (your project name or
 
 - 2, In some situations when using OptiX 7, debug mode is much slower, swith to release mode in IDE if it happens. 
 
-- 3, Parts of our codes are not well organized. Maybe I will organize them later and provide more updates.
+- 3, Part of our code is not well organized. Maybe I will organize them and provide more updates in the future.
