@@ -11,6 +11,13 @@ This repository reproduces the above three experiments. Refer to our paper for d
 
 **Paper: https://doi.org/10.1364/OE.474644   (If it's useful, consider cite our paper!)**
 
+our visualization 3 is selected as IMAGE OF THE WEEK by Optica Publishing Group (Formerly OSA)!
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/57349703/203493304-9645e8a7-98c8-4b45-88dc-42a1cb68e9a9.PNG" alt="1920" width='20%' height='20%'/>
+</p>
+
+
 ## 0.Contents
 
 OptiX 6.5 code for dragon (single mesh), mirror and refraction. 
